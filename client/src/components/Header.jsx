@@ -1,47 +1,42 @@
 import { FaSearch } from 'react-icons/fa';
-import { Link} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 export default function Header() {
-
   return (
-    <header className='bg-slate-200 shadow-md'>
-      <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
+    <header className='bg-gray-700 shadow-md'>
+      <div className='flex justify-between items-center max-w-6xl mx-auto p-4'>
         <Link to='/'>
-          <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-            <span className='text-slate-500'>Nikhil</span>
-            <span className='text-slate-700'>Estate</span>
+          <h1 className='font-bold text-xl flex items-center'>
+            <span className='text-white mr-1'>Nikhil</span>
+            <span className='text-teal-400'>Estate</span>
           </h1>
         </Link>
-        <form
-        
-          className='bg-slate-100 p-3 rounded-lg flex items-center'
-        >
+        <form className='bg-gray-800 p-2 rounded-lg flex items-center shadow-md'>
           <input
             type='text'
             placeholder='Search...'
-            className='bg-transparent focus:outline-none w-24 sm:w-64'
+            className='bg-transparent focus:outline-none w-24 sm:w-64 text-white placeholder-teal-400'
           />
-          <button>
-            <FaSearch className='text-slate-600' />
+          <button className='ml-2'>
+            <FaSearch className='text-teal-400' />
           </button>
         </form>
-        <ul className='flex gap-4'>
-          <Link to='/'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+        <ul className='flex gap-6'>
+          <li className='hidden sm:inline'>
+            <Link to='/' className='text-teal-400 hover:text-white transition duration-300'>
               Home
-            </li>
-          </Link>
-          <Link to='/about'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+            </Link>
+          </li>
+          <li className='hidden sm:inline'>
+            <Link to='/about' className='text-teal-400 hover:text-white transition duration-300'>
               About
-            </li>
-          </Link>
-          <Link to='/sign-in'>
-          <li className=' sm:inline text-slate-700 hover:underline'>
+            </Link>
+          </li>
+          <li className='sm:inline'>
+            <Link to='/sign-in' className='text-teal-400 hover:text-white transition duration-300'>
               SignIn
-            </li>
-          </Link>
+            </Link>
+          </li>
         </ul>
       </div>
     </header>
