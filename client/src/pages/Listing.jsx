@@ -5,18 +5,18 @@ import SwiperCore from 'swiper';
 import { useSelector } from 'react-redux';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
+
 import {
   FaBath,
   FaBed,
   FaChair,
-  FaMapMarkedAlt,
   FaMapMarkerAlt,
   FaParking,
   FaShare,
 } from 'react-icons/fa';
 
 
-
+import Contacts from '../components/Contacts'
 
 export default function Listing() {
   SwiperCore.use([Navigation]);
@@ -144,7 +144,7 @@ export default function Listing() {
                 Contact landlord
               </button>
             )}
-            {contact && <Contact listing={listing} />}
+            {contact && <Contacts listing={listing} />}
           </div>
         </div>
       )}
