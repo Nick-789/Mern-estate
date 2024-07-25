@@ -20,5 +20,8 @@
     "mongoose": "^8.5.1",
     "nodemon": "^3.1.4",
     "params": "^0.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4"
   }
 }
